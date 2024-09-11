@@ -13,12 +13,12 @@
         const spin = document.getElementById("spin");
         spin.addEventListener('click', () => {
             const start = Date.now();
-          	spin.innerHTML = 'Loading Blocker...';
+          	spin.innerHTML = 'Loading Taffi...';
 	          spin.disabled = true;  
           	spin.classList.add('disabled');
           	setTimeout(() => {
               while (Date.now() - start < 3000) {}
-              spin.innerHTML = 'Blocker Loaded';              
+              spin.innerHTML = 'Taffi Loaded';              
             }, 0);
         })
         const start = Date.now();
