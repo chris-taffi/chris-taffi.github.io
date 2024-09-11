@@ -1,0 +1,18 @@
+<html>
+    <body>
+    <button id="spin">Blocker</button>
+    <script>
+        const spin = document.getElementById("spin");
+        spin.addEventListener('click', () => {
+            const start = Date.now();
+          	spin.innerHTML = 'Loading Blocker...';
+          	setTimeout(() => {
+              while (Date.now() - start < 3000) {}
+              spin.innerHTML = 'Blocker Loaded';
+            }, 0);
+        })
+        const start = Date.now();
+        while (Date.now() - start < 10000) { }
+    </script>
+    </body>
+</html>
