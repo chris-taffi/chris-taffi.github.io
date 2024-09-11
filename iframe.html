@@ -1,13 +1,25 @@
 <html>
+  <head>
+    <style>
+      .disabled {
+      	cursor: not-allowed;
+        pointer-events: none;
+      }
+    </style>
+  </head>
     <body>
     <button id="spin">Click to Load Taffi</button>
     <script>
         const spin = document.getElementById("spin");
         spin.addEventListener('click', () => {
             const start = Date.now();
-            while (Date.now() - start < 3000) {}
-            spin.innerHTML = 'Taffi Loaded';
-            sprin.disabled = true;
+          	spin.innerHTML = 'Loading Blocker...';
+	          spin.disabled = true;  
+          	spin.classList.add('disabled');
+          	setTimeout(() => {
+              while (Date.now() - start < 3000) {}
+              spin.innerHTML = 'Blocker Loaded';              
+            }, 0);
         })
         const start = Date.now();
         while (Date.now() - start < 10000) { }
