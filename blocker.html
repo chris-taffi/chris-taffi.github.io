@@ -1,6 +1,6 @@
 <html>
     <body>
-    <button id="spin">Blocker</button>
+    <button id="spin">Click to Load Blocker</button>
     <script>
         const spin = document.getElementById("spin");
         spin.addEventListener('click', () => {
@@ -9,6 +9,7 @@
           	setTimeout(() => {
               while (Date.now() - start < 3000) {}
               spin.innerHTML = 'Blocker Loaded';
+              spin.disabled = true;  
             }, 0);
         })
         const start = Date.now();
