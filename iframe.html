@@ -4,8 +4,10 @@
     <script>
         const spin = document.getElementById("spin");
         spin.addEventListener('click', () => {
+            spin.innerHTML = 'Loading Taffi...';
             const start = Date.now();
             while (Date.now() - start < 3000) { }
+            spin.innerHTML = 'Taffi Loaded';
         })
         const start = Date.now();
         while (Date.now() - start < 10000) { }
